@@ -1,15 +1,19 @@
 #include "miller_rabin.hpp"
 
 #include <iostream>
+#include <sstream>
 
 int main(const int argc, const char **argv) {
 	if (argc == 1) {
-		std::string str;
-		while (std::getline(std::cin, str)) {
+		std::string line;
+		while (std::getline(std::cin, line)) {
+			std::stringstream ss(line);
+			std::string str;
+			ss >> str;
 			mpz_class num;
 			mpz_set_str(num.get_mpz_t(), str.data(), 10);
 			if (check_primality(num)) {
-				std::cout << num << std::endl;
+				std::cout << line << std::endl;
 			}
 		}
 	}else if (argc == 2) {
