@@ -5,7 +5,7 @@
 1. `isprime`
    - The input taken from the stdin.
    - The head of lines are interpreted as decimal number, then output whole line to stdout if the number is prime.
-2. `isprime <number in decimal>`
+2. `isprime <number>`
    - The input taken from 1st command-line argument, and interpreted as decimal.
    - If the number is prime, print `prime` to stdout.
    - If composite, print `composite`.
